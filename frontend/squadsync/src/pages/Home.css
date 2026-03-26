@@ -1,0 +1,219 @@
+/* Page Layout */
+.home {
+  padding: 24px;
+  color: #fff;
+  background: radial-gradient(circle at top right, #0b0f2a, #050816);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* Card Base */
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 🔷 Profile Card */
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6d28d9, #4c1d95);
+}
+
+.greeting {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.level {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Avatar */
+.avatar {
+  width: 65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+/* Online dot */
+.avatar::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid #4c1d95;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #c084fc;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badges span {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* 🔷 Stats Cards */
+.stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 18px;
+}
+
+.stat h2 {
+  margin-bottom: 5px;
+}
+
+/* Colors */
+.blue {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+.orange {
+  background: linear-gradient(135deg, #7c2d12, #ea580c);
+}
+
+.purple {
+  background: linear-gradient(135deg, #4c1d95, #7c3aed);
+}
+
+/* 🔷 Actions */
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.action-btn {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+  background: linear-gradient(135deg, #312e81, #4c1d95);
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* 🔷 Weekly Progress */
+.week {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.day {
+  text-align: center;
+}
+
+.bar {
+  width: 36px;
+  height: 20px;
+  background: #1f2937;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.day.active .bar {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+.day span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* 🔷 Summary */
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Smaller progress bars */
+.small {
+  height: 6px;
+}
+
+/* Progress colors */
+.progress.purple {
+  background: #a78bfa;
+}
+
+.progress.blue {
+  background: #60a5fa;
+}
+
+.progress.green {
+  background: #34d399;
+}
+
+/* 🔥 Responsive */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
